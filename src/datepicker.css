@@ -1,0 +1,28 @@
+.dp__theme_dark {
+    /*--dp-background-color: red;*/
+    --dp-background-color: hsl(var(--b1) / var(--tw-bg-opacity,1));
+    /*hsl(var(--b1) / var(--tw-bg-opacity));*/
+    --dp-text-color: hsl(var(--bc) / var(--tw-text-opacity,1));
+    --dp-hover-color: hsl(var(--bc) / var(--tw-border-opacity,0.1));
+    --dp-hover-text-color: hsl(var(--bc) / var(--tw-border-opacity,1));;
+    --dp-hover-icon-color: #959595;
+    --dp-primary-color: hsl(var(--p) / var(--tw-text-opacity,1));
+    --dp-primary-text-color: hsl(var(--pc) / var(--tw-text-opacity,1));
+    --dp-secondary-color: hsl(var(--bc) / var(--tw-text-opacity,0.3));;
+    --dp-border-color: hsl(var(--bc) / var(--tw-border-opacity,0.2));
+    --dp-menu-border-color: hsl(var(--bc) / var(--tw-border-opacity,0.2));
+    --dp-disabled-color: #737373;
+    --dp-scroll-bar-background: #212121;
+    --dp-scroll-bar-color: #484848;
+    --dp-success-color: hsl(var(--su) / var(--tw-text-opacity,1));
+    --dp-success-color-disabled: hsl(var(--su) / var(--tw-text-opacity,0.5));
+    --dp-icon-color: hsl(var(--bc) / var(--tw-border-opacity,0.5));
+    --dp-danger-color: #e53935;
+}
+.dp__menu {
+  @apply shadow-xl
+}
+
+input.dp__input_icon_pad {
+  padding-left: 35px;
+}

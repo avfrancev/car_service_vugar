@@ -1,0 +1,21 @@
+<script setup lang="ts">
+import { computed } from 'vue'
+const props = defineProps<{ src: string | any[] }>()
+const allSources = computed(() =>
+  Array.isArray(props.src) ? props.src : [{ srcset: props.src }])
+const sources = computed(() => allSources.value.slice(0, -1))
+const lastSource = computed(() => allSources.value[allSources.value.length - 1])
+</script>
+
+<script lang="ts">
+export default {
+  inheritAttrs: false
+}
+</script>
+
+<template>
+  <picture>
+    <source v-for="(attrs, index) in sources" :key="index" v-bind="attrs">
+    <img v-bind="{ ...lastSource, ...$attrs }">
+  </picture>
+</template>
